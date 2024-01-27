@@ -5,12 +5,16 @@ import viteLogo from '/vite.svg';
 import { fireToast } from './components/toasts/state/toast-state';
 import { ToastFactory } from './components/toasts/factories/toast-factory';
 import { ToastContainer } from './components/toasts/components/toast-container';
+import { useNetworkState } from './hooks/use-network-state';
 
 import './App.css';
 
 function App() {
+  const isOnline = useNetworkState();
+
   return (
     <>
+      {isOnline ? null : <div>network error</div>}
       <div>
         <a href='https://vitejs.dev' target='_blank'>
           <img src={viteLogo} className='logo' alt='Vite logo' />
