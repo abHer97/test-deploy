@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom/client';
  * Archivo original: App.tsx
  * Archivo mejorado: AppImproved.tsx
  */
-import App from './AppImproved.tsx';
+import App from './App.tsx';
 
 import './index.css';
 
