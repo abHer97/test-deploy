@@ -6,11 +6,17 @@ import { fireToast } from './components/toasts/state/toast-state';
 import { ToastFactory } from './components/toasts/factories/toast-factory';
 import { ToastContainer } from './components/toasts/components/toast-container';
 import { useNetworkState } from './hooks/use-network-state';
+import { useTodos } from './todos/use-todos';
 
 import './App.css';
 
 function App() {
   const isOnline = useNetworkState();
+  const todosStore = useTodos();
+
+  function addTodo() {
+    todosStore.addTodo({ name: window.crypto.randomUUID() });
+  }
 
   return (
     <>
@@ -26,6 +32,7 @@ function App() {
       <h1>Vite + React</h1>
       <div className='card'>
         <Counter />
+        <button onClick={addTodo}>add todo</button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
