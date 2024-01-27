@@ -1,0 +1,130 @@
+# Curso de React + Typescript + Testing y Git
+
+En este curso aprenderas desde lo mas basico de react, pasando por optimizaciones de rendimiento y veras hasta partes avanzadas de como separar y estructurar tu codigo. También veras como testear tus componentes y tus reglas de negocio, asi como hacer tu codigo testeable y matenible
+
+## Table of contents
+
+- Prerrequisitos
+  - Conocimientos basicos de javascript
+- Instalaciones necesarias
+  - Nodejs v18>
+  - Visual studio code
+  - Una terminal de comandos
+    - Windows
+      - Windows terminal
+      - Powershell
+    - Linux
+      - Bash
+      - zsh
+    - MacOs
+      - Terminal
+      - ITerm2
+- Introduccion al curso
+- Presentacion de las herramientas que vamos a estar utilizando
+  - React
+  - NodeJS
+  - Vite
+  - Vitest
+  - Typescript
+  - Git
+  - Patrones de diseño
+  - Patrones de arquitectura
+- Fundamentos de javascript
+  - Tipos de datos
+  - Variables y constantes
+  - Objetos
+    - Como crear
+    - Object.keys
+    - Object.values
+    - Object.FromEntries
+    - Desestructurar
+  - Arrays
+    - Como crear
+    - Recorrer un arreglo
+    - Agregar elemento
+    - Quitar elemento
+    - Ordenar
+    - Invertir
+    - Desestructurar
+    - map
+    - filter
+    - find
+    - reduce
+  - Mutabilidad
+  - Inmutabilidad
+  - Funciones
+    - Normales
+    - Flecha o lambda
+    - Parametros
+    - Parametros nombrados
+    - Parametros por defecto
+    - Buenas practicas
+    - HOF
+    - Closures
+  - Strings
+    - mayusculas
+    - minusculas
+    - includes
+  - Promesas
+  - Async/Await
+  - Operador ternario
+- Fundamentos de typescript
+  - tsconfig.json
+  - tipos basicos
+  - tipando objetos
+  - tipando funciones
+  - tipando arreglos
+  - interface vs type
+- Git
+  - Que es?
+  - Como funciona?
+  - Comandos basicos
+  - Flujo de trabajo cotidiano
+  - Inicializando git
+  - Creando tu primer commit
+  - Convenciones de commit
+- Patrones de arquitectura
+  - Arquitectura limpia
+  - Screaming architecture
+- Patrones de diseño
+  - Patron observador
+  - Inyección de depencencias
+  - Singletone
+  - Module
+  - Factory
+  - Composition
+  - Dynamic imports
+  - Adapter
+- Patrones de diseño en React
+  - Compound components
+  - Render props
+- React
+  - Creando un proyecto desde 0.
+  - Como funciona?
+  - Explicacion del package.json
+  - Como crear componentes
+  - Componentes vs elementos
+  - Hooks
+    - Reglas de uso
+    - useState
+    - useEffect
+    - useLayoutEffect
+    - useRef
+    - useMemo
+    - useCallback
+    - useContext
+    - useId
+    - useReducer
+    - useSyncExternalStore
+  - Creando tu propia libreria de notificaciones toasts
+    - Componentes personalizados
+    - Manejo de estado
+    - State vs props
+    - Compound Componentes
+    - Patron observer
+    - Optimizaciones de rendimiento
+  - Creando proyecto de peliculas TMDB
+    - Inicio de sesion
+    - Estado global
+    - Manejo de la sesion
+    - Mejoras en UX
