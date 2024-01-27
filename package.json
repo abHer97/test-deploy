@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://abHer97.github.com/test-deploy",
+  "homepage": "https://abHer97.github.io/test-deploy",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
