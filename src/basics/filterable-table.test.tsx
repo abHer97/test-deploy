@@ -3,7 +3,7 @@ import { cleanup, render, screen, Screen } from '@testing-library/react';
 
 import { FilterableTable } from './filterable-table';
 
-describe('filterableTable component', () => {
+describe('<FilterableTeable /> component', () => {
   const PRODUCTS = [
     { category: 'Fruits', price: '$1', stocked: true, name: 'Apple' },
     { category: 'Fruits', price: '$1', stocked: true, name: 'Dragonfruit' },
@@ -31,7 +31,7 @@ describe('filterableTable component', () => {
     cleanup();
   });
 
-  describe('searchBar component', () => {
+  describe('<SearchBar /> component', () => {
     test('should render the input search with no text', async () => {
       setup();
 
@@ -50,7 +50,7 @@ describe('filterableTable component', () => {
     });
   });
 
-  describe('productTable component', () => {
+  describe('<ProductTable /> component', () => {
     test('should render a table with given products', async () => {
       setup();
 
