@@ -90,4 +90,44 @@ describe('createObservableStore test suite', () => {
       expect(subscriber).toHaveBeenCalledTimes(1);
     });
   });
+
+  describe('create store with state creator as initialState', () => {
+    test('should not to throw an error', () => {
+      const stateCreator = () => {
+        return {
+          name: 'foo',
+          lastname: 'bar',
+        };
+      };
+
+      expect(() => createObservableStore(stateCreator)).not.toThrowError();
+    });
+
+    test('should create an state capable of mutate state with no need to call store.setState', () => {
+      interface IState {
+        name: string;
+        lastname: string;
+        setName(name: string): void;
+      }
+      const store = createObservableStore<IState>((set) => {
+        return {
+          name: 'foo',
+          lastname: 'bar',
+          setName(name) {
+            set({ name });
+          },
+        };
+      });
+
+      const state = store.getState();
+      state.setName('john');
+      // eslint-disable-next-line
+      const { setName, ...updatedState } = store.getState();
+
+      expect(updatedState).toEqual({
+        name: 'john',
+        lastname: 'bar',
+      });
+    });
+  });
 });
