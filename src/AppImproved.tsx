@@ -1,19 +1,14 @@
 import { useState } from 'react';
 
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import { fireToast } from './components/toasts/state/toast-state';
 import { ToastFactory } from './components/toasts/factories/toast-factory';
 import { ToastContainer } from './components/toasts/components/toast-container';
 import { useNetworkState } from './hooks/use-network-state';
 import { useTodos } from './todos/use-todos';
 
-import './App.css';
-
 function App() {
   const isOnline = useNetworkState();
   const todosStore = useTodos();
-
   function addTodo() {
     todosStore.addTodo({ name: window.crypto.randomUUID() });
   }
@@ -21,23 +16,9 @@ function App() {
   return (
     <>
       {isOnline ? null : <div>network error</div>}
-      <div>
-        <a href='https://vitejs.dev' target='_blank'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className='card'>
-        <Counter />
-        <button onClick={addTodo}>add todo</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
+
+      <Counter />
+      <button onClick={addTodo}>add todo</button>
       <ToastContainer />
     </>
   );
