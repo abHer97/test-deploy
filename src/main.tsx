@@ -6,12 +6,14 @@ import ReactDOM from 'react-dom/client';
  * Archivo original: App.tsx
  * Archivo mejorado: AppImproved.tsx
  */
-import App from './AppImproved.tsx';
+// import App from './AppImproved.tsx';
+import { FilterableTable } from './basics/filterable-table.tsx';
+import { PRODUCTS } from './basics/get-data.ts';
 
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <FilterableTable products={PRODUCTS} />
   </React.StrictMode>
 );
