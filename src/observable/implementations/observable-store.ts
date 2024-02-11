@@ -10,16 +10,17 @@ export function createObservableStore<TState>(
   initialState: TState | ((setter: Setter<TState>) => TState)
 ): IObservableStore<TState> {
   let state: TState;
+  const subscribers = new Set<Subscriber<TState>>();
 
   function setter(nextState: Partial<TState>) {
     const updatedState = Object.assign({}, state, nextState);
 
     state = updatedState;
+
     subscribers.forEach((listener) => listener(state));
   }
 
   state = isFunction(initialState) ? initialState(setter) : initialState;
-  const subscribers = new Set<Subscriber<TState>>();
 
   return {
     getState() {
