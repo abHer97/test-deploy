@@ -15,6 +15,7 @@ export function createObservableStore<TState>(
     const updatedState = Object.assign({}, state, nextState);
 
     state = updatedState;
+    subscribers.forEach((listener) => listener(state));
   }
 
   state = isFunction(initialState) ? initialState(setter) : initialState;
